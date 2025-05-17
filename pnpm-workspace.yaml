@@ -1,0 +1,10 @@
+packages:
+  - docs
+  - packages/*
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - dtrace-provider
+  - esbuild
+  - sharp
+  - simple-git-hooks
+  - spawn-sync

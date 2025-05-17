@@ -1,0 +1,69 @@
+name: 🚀 Release
+on:
+  workflow_dispatch:
+    inputs:
+      package:
+        description: Package to release
+        default: wxt
+        type: choice
+        options:
+          - analytics
+          - auto-icons
+          - i18n
+          - module-react
+          - module-solid
+          - module-svelte
+          - module-vue
+          - storage
+          - unocss
+          - webextension-polyfill
+          - wxt
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate
+    uses: './.github/workflows/validate.yml'
+    secrets: inherit
+
+  publish:
+    name: Publish
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    needs:
+      - validate
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Configure Git
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global push.followTags true
+
+      - name: Bump and Tag
+        run: |
+          pnpm tsx scripts/bump-package-version.ts ${{ inputs.package }}
+          git push
+          git push --tags
+
+      - name: Publish to NPM
+        working-directory: packages/${{ inputs.package }}
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+          pnpm build
+          pnpm publish
+
+      - name: Create GitHub release
+        run: pnpm tsx scripts/create-github-release.ts ${{ inputs.package }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

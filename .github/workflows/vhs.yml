@@ -1,0 +1,45 @@
+name: 📼 VHS
+on:
+  push:
+    paths:
+      - 'docs/tapes/*.tape'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  vhs:
+    name: Create VHS
+    runs-on: ubuntu-22.04
+    if: ${{ github.repository == 'wxt-dev/wxt' }}
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup
+        uses: ./.github/actions/setup
+        with:
+          install: false
+
+      # This prevents pnpm dlx from downloading WXT in the video
+      - name: Pre-install WXT
+        run: |
+          pnpm store add wxt@latest
+          pnpm dlx wxt@latest --version
+
+      - name: Record VHS
+        uses: charmbracelet/vhs-action@v2.1.0
+        with:
+          path: 'docs/tapes/init-demo.tape'
+
+      - name: Save recorded GIF
+        uses: stefanzweifel/git-auto-commit-action@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          commit_message: 'docs: Update `wxt init` GIF'
+          # https://github.com/charmbracelet/vhs#output
+          file_pattern: 'docs/assets/*.gif'

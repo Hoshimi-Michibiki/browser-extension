@@ -1,0 +1,9 @@
+{
+  "extends": ["../../tsconfig.base.json", "./.wxt/tsconfig.json"],
+  "compilerOptions": {
+    "paths": {
+      "#analytics": ["./.wxt/analytics/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
