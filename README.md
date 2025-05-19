@@ -8,7 +8,7 @@
 - run ```pnpm install``` - [Install pnpm if you haven't](https://pnpm.io/installation)
 
 ### Build and Test
-- Simply run ```pnpm run dev``` or ```pnpm run dev:firefox``` if you use Mozilla's browser
+- Simply run ```pnpm run dev``` or ```pnpm run dev:firefox``` if you use firefox based browser
 - If you encounter errors or the browser window isn't showing up. You will need to continue reading this README file.
 ### Specify startup browser path for testing
 If you haven't, copy ```.env.example``` and name it to ```.env```. We will start edit this file.
@@ -24,7 +24,7 @@ If you haven't, copy ```.env.example``` and name it to ```.env```. We will start
  
     
 **+ Your own browser**
-  + If your browser is **chromium** based, the env keys you need would be ```CHROME_XXX_PATH```, and for **Mozilla**: ```FIREFOX_XXX_PATH```
+  + If your browser is **chromium** based, the env keys you need would be ```CHROME_XXX_PATH```, and for **firefox** based browsers: ```FIREFOX_XXX_PATH```
   + Find your browser executable path and paste it into ```FIREFOX_BIN_PATH``` or ```CHROME_BIN_PATH``` field
   + You are ready to test
   #### For testing directly on your current profile without creating one each time
