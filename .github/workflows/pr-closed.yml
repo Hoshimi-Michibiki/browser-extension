@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   thank-you:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     if: github.event.pull_request.merged == true
 
     steps:
