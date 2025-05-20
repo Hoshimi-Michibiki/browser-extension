@@ -10,8 +10,7 @@ on:
 jobs:
   build_and_test:
     name: Build and Test
-    # runs-on: self-hosted
-    runs-on: windows-latest
+    runs-on: self-hosted
 
     steps:
       - name: Checkout Repository
