@@ -10,7 +10,7 @@ permissions:
 jobs:
   sync:
     name: 'Sync with @types/chrome'
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     permissions:
       contents: write
     steps:
