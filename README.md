@@ -1,3 +1,5 @@
+[![🔨 Build and Test](https://github.com/Hoshimi-Michibiki/browser-extension/actions/workflows/build-and-test.yaml/badge.svg)](https://github.com/Hoshimi-Michibiki/browser-extension/actions/workflows/build-and-test.yaml)
+
 # Browser extension for the Michibiki Discord Bot!
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar).
 
