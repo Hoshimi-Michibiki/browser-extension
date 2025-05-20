@@ -13,7 +13,7 @@ permissions:
 jobs:
   build:
     name: Publish Test Packages
-    runs-on: ubuntu-22.04
+    runs-on: self-hosted
     if: ${{ github.repository == 'wxt-dev/wxt' }}
     steps:
       - name: Checkout
