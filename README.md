@@ -7,6 +7,7 @@
 ### Project setup
 - Clone the source code
 - ```cd browser-extension```
+- [Install Node Version 22 (LTS)](https://nodejs.org/en/download)
 - run ```pnpm install``` - [Install pnpm if you haven't](https://pnpm.io/installation)
 
 ### Build and Test
