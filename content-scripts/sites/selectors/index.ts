@@ -1,0 +1,28 @@
+export const selectors = {
+  google: {
+    css: {
+      lensButton: '[data-base-lens-url="https://lens.google.com"]',
+    },
+    xpath: {
+      searchBarButtonsParent: `//*[@data-base-lens-url="https://lens.google.com"]/..`,
+    },
+  },
+
+  youtube: {
+    css: {
+      playButton: '#play-button',
+    },
+    xpath: {
+      videoTitle: `//h1[contains(@class, "title")]`,
+    },
+  },
+  
+  youtubeMusic: {
+    css: {
+      playButton: '#play-button',
+    },
+    xpath: {
+      videoTitle: `//h1[contains(@class, "title")]`,
+    },
+  },
+};
