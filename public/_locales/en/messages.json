@@ -1,0 +1,9 @@
+{
+  "extName": {
+    "message": "Michibiki Link Fetcher",
+    "description": "The name of the extension"
+  },
+  "extDescription": {
+    "message": "..."
+  }
+}
