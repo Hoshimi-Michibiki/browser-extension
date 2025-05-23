@@ -4,10 +4,16 @@ import { selectors } from "../selectors";
 import { waitForElementByXPath, waitForElementBySelector, observeDOM } from "@/utils/dom-helpers";
 import { logger } from '@/utils/logger';
 import { ContentScriptContext } from "#imports";
+// import purecss from '~/public/pure-css/pure.css';
 
 export const hostnamePatterns: RegExp[] = [/^(?:www\.)google\.com$/i];
 
-let unmountFunctions: (() => void)[] = [];
+interface InjectedComponents {
+    componentName?: string;
+    unmount: () => void;
+}
+
+let unmountFunctions: InjectedComponents[] = [];
 
 async function injectButtonIntoPlayer(context: ContentScriptContext) {
     try {
@@ -22,15 +28,22 @@ async function injectButtonIntoPlayer(context: ContentScriptContext) {
             mountPoint.className = 'michibiki-injected-button';
             playBar.appendChild(mountPoint);
             logger.debug(`playbar: `, playBar);
-            return; // just testing
-            const { unmount } = await mountInjectedComponent(
-                    context,
-                    MusicSiteButton,
-                    mountPoint,
-                    { msg: 'Ext Action'},
-                );
-            unmountFunctions.push(unmount);
-
+            const { unmount, componentName } = await mountInjectedComponent(
+                context,
+                MusicSiteButton,
+                mountPoint,
+                { msg: 'Ext Action'},
+                'Component name here',
+            );
+            unmountFunctions.push({componentName, unmount});
+            // return; // just testing
+            unmountFunctions.forEach(({unmount, componentName})=>{
+                logger.debug(unmount, componentName);
+                // this is to unmount the only needed component
+                // if (componentName === 'Component name here') {
+                //     unmount();
+                // }
+            });
             logger.warn(`execution stops here..`);
         } else {
             logger.info(`Seems like the cute button has already exists or injection has failed`);
