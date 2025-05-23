@@ -1,23 +1,26 @@
 import { ContentScriptContext } from "#imports";
 import { type Component, App as VueApp, createApp } from "vue";
 import { createShadowRootUi } from "#imports";
+import { logger } from "@/utils/logger";
 
 interface InjectedComponentMount {
   unmount: () => void;
-  // sendMessage?: (message: any) => Promise<any>; // im considering this
+  componentName?: string;
+//   sendMessage?: (message: any) => Promise<any>; // im considering this
 }
 
 export async function mountInjectedComponent(
   context: ContentScriptContext,
   VueComponent: Component,
-  mountPoint: HTMLElement,
+  mountPoint: HTMLDivElement,
   props?: Record<string, any>,
+  componentName?: string, // so we would know the exact component to unmount
   css = ":host { all: initial; }"
 ): Promise<InjectedComponentMount> {
   const ui = await createShadowRootUi(context, {
-    name: `injected-${VueComponent.name || "component"}-${Date.now()}`,
+    name: `michibiki-injected-${VueComponent.name || "component"}-${Date.now()}`,
     position: "inline",
-    anchor: "body",
+    anchor: mountPoint,
     css,
     onMount: (
       uiContainer: HTMLElement,
@@ -33,5 +36,6 @@ export async function mountInjectedComponent(
 
   return {
     unmount: ui.remove,
+    componentName: componentName
   };
 }
