@@ -5,5 +5,15 @@
   },
   "extDescription": {
     "message": "..."
+  },
+  "greetUser": {
+    "message": "Xin chào, $USERNAME$!",
+    "description": "Chào hỏi người dùng",
+    "placeholders": {
+      "USERNAME": {
+        "content": "$1",
+        "example": "Khách"
+      }
+    }
   }
 }
