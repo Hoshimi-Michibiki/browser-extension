@@ -9,12 +9,13 @@ interface InjectedComponentMount {
 //   sendMessage?: (message: any) => Promise<any>; // im considering this
 }
 
+
 export async function mountInjectedComponent(
   context: ContentScriptContext,
   VueComponent: Component,
   mountPoint: HTMLDivElement,
-  props?: Record<string, any>,
-  componentName?: string, // so we would know the exact component to unmount
+  props: Record<string, any>,
+  componentName: string, // so we would know the exact component to unmount
   css = ":host { all: initial; }"
 ): Promise<InjectedComponentMount> {
   const ui = await createShadowRootUi(context, {
