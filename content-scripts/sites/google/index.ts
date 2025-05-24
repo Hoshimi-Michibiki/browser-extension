@@ -4,7 +4,8 @@ import { selectors } from "../selectors";
 import { waitForElementByXPath, waitForElementBySelector, observeDOM } from "@/utils/dom-helpers";
 import { logger } from '@/utils/logger';
 import { ContentScriptContext } from "#imports";
-// import purecss from '~/public/pure-css/pure.css';
+
+import pureCssContent from '@/public/material-you/css/material-design-light.min.css?inline';
 
 export const hostnamePatterns: RegExp[] = [/^(?:www\.)google\.com$/i];
 
@@ -34,6 +35,7 @@ async function injectButtonIntoPlayer(context: ContentScriptContext) {
                 mountPoint,
                 { msg: 'Ext Action'},
                 'Component name here',
+                pureCssContent
             );
             unmountFunctions.push({componentName, unmount});
             // return; // just testing
