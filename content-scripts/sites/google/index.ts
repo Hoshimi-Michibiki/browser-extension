@@ -9,11 +9,6 @@ import pureCssContent from '@/public/material-you/css/material-design-light.min.
 
 export const hostnamePatterns: RegExp[] = [/^(?:www\.)google\.com$/i];
 
-interface InjectedComponents {
-    componentName?: string;
-    unmount: () => void;
-}
-
 let unmountFunctions: InjectedComponents[] = [];
 
 async function injectButtonIntoPlayer(context: ContentScriptContext) {
