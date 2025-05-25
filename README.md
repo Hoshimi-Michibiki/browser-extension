@@ -24,9 +24,10 @@ Update info on the development progress of the extension...
 - [x] Updated README with this development status section.
 - [ ] Add remaining necessary project files - *(In Progress)*.
 - [ ] Define communication method (background script, message passing) - *(In Progress)*.
-- [ ] Design a scalable architecture (OOP/Component-based?) for easy site expansion - *(Planned)*.
 
 ### Core Logic
+- [x] Implement local storage.
+- [ ] Implement login and authentication (popup page).
 - [ ] Implement MutationObserver for context menus (3-dots) - *(In Progress)*.
 - [ ] Retrieve full video/song info when injected buttons are clicked - *(In Progress)*.
 - [ ] Implement "Add to Queue" logic - *(Planned)*.
@@ -34,6 +35,7 @@ Update info on the development progress of the extension...
 - [ ] Implement "Play Next" logic - *(Planned)*.
 
 ### UI & Page Integration
+- [x] Simple welcome screen
 - [ ] Refine and fix popup UI/Logic - *(In Progress)*.
 - [ ] **YouTube (Homepage/Shorts/Watch Page):**
     - [ ] Add "Add to Queue" option to video items (3-dots menu) - *(Planned)*.
@@ -43,11 +45,10 @@ Update info on the development progress of the extension...
 - [ ] **YouTube Music:**
     - [ ] Add options to the 3-dots menu - *(Planned)*.
     - [ ] Add a dedicated dropdown/menu with options - *(Planned)*.
-- [ ] **Others?**
+- [ ] **Other Pages?**
     - [ ] Comming soon - *(Planned)*.
 
 ### Extra Features
-- [ ] Data Synchronization - *(Planned)*.
 - [x] Multi-language Support
 
 ---
