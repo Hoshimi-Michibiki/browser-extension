@@ -3,6 +3,55 @@
 # Browser extension for the Michibiki Discord Bot!
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar).
 
+# Development Status
+
+Update info on the development progress of the extension...
+
+**Legend:**
+* `[x]` - **Completed:** The feature is implemented and stable.
+* `[ ]` - **Not Completed:** May be in progress or planned. Check specific notes.
+
+---
+
+### Project Structure
+- [x] Set up the basic project structure.
+- [x] Created development branch (`dev`).
+- [x] Implemented and tested basic site detection logic.
+- [x] Refactored/Improved element injection helper functions.
+- [x] Created/Updated the initial popup UI.
+- [x] Fixed initial styling issues.
+- [x] Successfully injected Vue components onto pages.
+- [x] Updated README with this development status section.
+- [ ] Add remaining necessary project files - *(In Progress)*.
+- [ ] Define communication method (background script, message passing) - *(In Progress)*.
+- [ ] Design a scalable architecture (OOP/Component-based?) for easy site expansion - *(Planned)*.
+
+### Core Logic
+- [ ] Implement MutationObserver for context menus (3-dots) - *(In Progress)*.
+- [ ] Retrieve full video/song info when injected buttons are clicked - *(In Progress)*.
+- [ ] Implement "Add to Queue" logic - *(Planned)*.
+- [ ] Implement "Play Now" logic - *(Planned)*.
+- [ ] Implement "Play Next" logic - *(Planned)*.
+
+### UI & Page Integration
+- [ ] Refine and fix popup UI/Logic - *(In Progress)*.
+- [ ] **YouTube (Homepage/Shorts/Watch Page):**
+    - [ ] Add "Add to Queue" option to video items (3-dots menu) - *(Planned)*.
+    - [ ] Add "Play Now" option to video items (3-dots menu) - *(Planned)*.
+    - [ ] Add "Play Next" option to video items (3-dots menu) - *(Planned)*.
+    - [ ] Ensure consistent styling and placement - *(Planned)*.
+- [ ] **YouTube Music:**
+    - [ ] Add options to the 3-dots menu - *(Planned)*.
+    - [ ] Add a dedicated dropdown/menu with options - *(Planned)*.
+- [ ] **Others?**
+    - [ ] Comming soon - *(Planned)*.
+
+### Extra Features
+- [ ] Data Synchronization - *(Planned)*.
+- [x] Multi-language Support
+
+---
+
 # Setup
 ### Project setup
 - Clone the source code
