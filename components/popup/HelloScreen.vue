@@ -20,7 +20,7 @@ const count = ref(0);
   <h1>{{ msg }}</h1>
 
   <div class="card">
-    <button class="button button-elevated" type="button" @click="count++">Connect to Discord</button>
+    <button class="button button-elevated" type="button" @click="count++">{{ t('discordLoginTitle') }}</button>
     <!-- <p>{{ t('greetUser','User') }}</p> -->
     <!-- <p>
       Edit
@@ -33,7 +33,14 @@ const count = ref(0);
     <a href="https://github.com/vuejs/language-tools" target="_blank">Volar</a>
     in your IDE for a better DX
   </p> -->
-  <p class="text-muted">Have you invited <a href="https://github.com" target="_blank">the Michibiki bot ?</a><br>This is required for the extension to work<br>Click <a href="https://github.com" target="_blank">here</a> to learn more !</p>
+  <p class="text-muted">{{ t('michibikiBotPreamble') }} 
+    <a href="https://github.com" target="_blank">
+      {{ t('michibikiBotLinkText') }} ?
+      </a>
+      <br>{{ t('michibikiBotRequirement') }}<br>
+      <!-- Click <a href="https://github.com" target="_blank">here</a> to learn more ! -->
+       <!-- {{ t('discordLoginPrivacyInfo') }} -->
+      </p>
 </template>
 
 <style scoped>

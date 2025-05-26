@@ -15,5 +15,20 @@
         "example": "Khách"
       }
     }
-  }
+  },
+  "discordLoginTitle": { "message": "Kết nối với Discord" },
+  "discordLoginSubtitle": { "message": "Kết nối với Discord để truy cập toàn bộ tính năng" },
+  "discordLoginButtonLabel": { "message": "Đăng nhập với Discord" },
+  "discordLoginLoadingButton": { "message": "Đang tải..." },
+  "discordLoginPrivacyInfo": {
+    "message": "Tiện ích này cần ID của bạn để xác minh"
+  },
+  "discordLoginNoDataSaving": {
+    "message": "Chúng tôi sẽ không lưu lại thông tin này"
+  },
+  "michibikiBotPreamble": { "message": "Bạn chưa có" },
+  "michibikiBotLinkText": { "message": "bot Michibiki" },
+  "michibikiBotRequirement": { "message": "Bot cần phải trong server của bạn để tiện ích hoạt động." },
+  "discordLoginGenericError": { "message": "Lỗi không xác định khi đăng nhập." },
+  "discordLoginSimulatedError": { "message": "Không thể kết nối tới Discord. Thử lại sau." }
 }

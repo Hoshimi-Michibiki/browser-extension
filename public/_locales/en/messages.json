@@ -15,5 +15,20 @@
         "example": "Guest"
       }
     }
-  }
+  },
+  "discordLoginTitle": { "message": "Connect to Discord" },
+  "discordLoginSubtitle": { "message": "Log in with your Discord account to enable enhanced features." },
+  "discordLoginButtonLabel": { "message": "Login with Discord" },
+  "discordLoginLoadingButton": { "message": "Connecting..." },
+  "discordLoginPrivacyInfo": {
+    "message": "We need your ID to verify"
+  },
+  "discordLoginNoDataSaving": {
+    "message": "And we don't save anything on our servers"
+  },
+  "michibikiBotPreamble": { "message": "Have you invited" },
+  "michibikiBotLinkText": { "message": "the Michibiki bot" },
+  "michibikiBotRequirement": { "message": "This is required for the extension to work." },
+  "discordLoginGenericError": { "message": "An unknown error occurred during login." },
+  "discordLoginSimulatedError": { "message": "Could not connect to Discord. Please try again." }
 }
