@@ -13,7 +13,8 @@ const isLoading = ref(false);
 const loginError = ref<string | null>(null);
 
 
-const michibikiBotInviteLink = ref('https://discord.com/oauth2/authorize?client_id=?&scope=bot&permissions=?'); 
+// todo: move to env
+const michibikiBotInviteLink = ref('');
 
 
 const isMichibikiBotMentionedInPrivacy = computed(() => {
