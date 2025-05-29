@@ -25,8 +25,11 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile 
 
-      - name: Build Extension (Production)
+      - name: Build Extension (Chromium Production)
         run: pnpm build  
+      
+      - name: Build Extension (Firefox Production)
+        run: pnpm build:firefox
 
       # - name: Run Tests
         # run: pnpm test
