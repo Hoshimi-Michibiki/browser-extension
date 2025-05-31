@@ -33,13 +33,8 @@ async function injectButtonIntoPlayer(context: ContentScriptContext) {
                 pureCssContent
             );
             unmountFunctions.push({componentName, unmount});
-            // return; // just testing
             unmountFunctions.forEach(({unmount, componentName})=>{
                 logger.debug(unmount, componentName);
-                // this is to unmount the only needed component
-                // if (componentName === 'Component name here') {
-                //     unmount();
-                // }
             });
             logger.warn(`execution stops here..`);
         } else {

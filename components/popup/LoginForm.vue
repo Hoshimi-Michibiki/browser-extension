@@ -12,10 +12,8 @@ defineProps({
 const isLoading = ref(false);
 const loginError = ref<string | null>(null);
 
-
 // todo: move to env
 const michibikiBotInviteLink = ref('');
-
 
 const isMichibikiBotMentionedInPrivacy = computed(() => {
   return t('discordLoginPrivacyInfo').toLowerCase().includes('michibiki');
@@ -27,9 +25,7 @@ const handleDiscordLogin = async () => {
   console.log('Initiating Discord login...');
 
   try {
-    
     await new Promise(resolve => setTimeout(resolve, 2500)); 
-
     console.log('Discord OAuth flow would be handled by background script.');
 
   } catch (error: any) {
@@ -71,7 +67,6 @@ const handleDiscordLogin = async () => {
     </div>
 
     <p v-if="loginError" class="error-message">{{ loginError }}</p>
-
     <p class="text-muted privacy-notice">{{ t('discordLoginPrivacyInfo') }} <br> {{ t('discordLoginNoDataSaving') }}.</p>
     <p class="text-muted" v-if="!isMichibikiBotMentionedInPrivacy">
       {{ t('michibikiBotPreamble') }} <a :href="michibikiBotInviteLink" target="_blank">{{ t('michibikiBotLinkText') }}</a>? <br>{{ t('michibikiBotRequirement') }}
