@@ -21,25 +21,13 @@ const count = ref(0);
 
   <div class="card">
     <button class="button button-elevated" type="button" @click="count++">{{ t('discordLoginTitle') }}</button>
-    <!-- <p>{{ t('greetUser','User') }}</p> -->
-    <!-- <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p> -->
   </div>
 
-  <!-- <p>
-    Install
-    <a href="https://github.com/vuejs/language-tools" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p> -->
   <p class="text-muted">{{ t('michibikiBotPreamble') }} 
     <a href="https://github.com" target="_blank">
       {{ t('michibikiBotLinkText') }} ?
       </a>
       <br>{{ t('michibikiBotRequirement') }}<br>
-      <!-- Click <a href="https://github.com" target="_blank">here</a> to learn more ! -->
-       <!-- {{ t('discordLoginPrivacyInfo') }} -->
       </p>
 </template>
 
