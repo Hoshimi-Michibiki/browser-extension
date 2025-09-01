@@ -12,8 +12,8 @@ importers:
         specifier: ^3.5.13
         version: 3.5.16(typescript@5.8.3)
       zod:
-        specifier: ^3.25.51
-        version: 3.25.51
+        specifier: ^4.1.5
+        version: 4.1.5
     devDependencies:
       '@wxt-dev/module-vue':
         specifier: ^1.0.2
@@ -2031,8 +2031,11 @@ packages:
   zip-dir@2.0.0:
     resolution: {integrity: sha512-uhlsJZWz26FLYXOD6WVuq+fIcZ3aBPGo/cFdiLlv3KNwpa52IF3ISV8fLhQLiqVu5No3VhlqlgthN6gehil1Dg==}
 
-  zod@3.25.51:
-    resolution: {integrity: sha512-TQSnBldh+XSGL+opiSIq0575wvDPqu09AqWe1F7JhUMKY+M91/aGlK4MhpVNO7MgYfHcVCB1ffwAUTJzllKJqg==}
+  zod@3.25.76:
+    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
+
+  zod@4.1.5:
+    resolution: {integrity: sha512-rcUUZqlLJgBC33IT3PNMgsCq6TzLQEG/Ei/KTCU0PedSWRMAXoOUN+4t/0H+Q8bdnLPdqUYnvboJT0bn/229qg==}
 
 snapshots:
 
@@ -3472,7 +3475,7 @@ snapshots:
       open: 9.1.0
       ora: 6.3.1
       prompts: 2.4.2
-      zod: 3.25.51
+      zod: 3.25.76
     transitivePeerDependencies:
       - supports-color
 
@@ -4044,4 +4047,6 @@ snapshots:
       async: 3.2.6
       jszip: 3.10.1
 
-  zod@3.25.51: {}
+  zod@3.25.76: {}
+
+  zod@4.1.5: {}
