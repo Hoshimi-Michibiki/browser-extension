@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@wxt-dev/module-vue": "^1.0.2",
-    "dotenv": "^16.5.0",
+    "dotenv": "^17.2.3",
     "lint-staged": "^16.0.0",
     "typescript": "5.8.3",
     "vue-tsc": "^2.2.10",

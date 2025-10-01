@@ -19,8 +19,8 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2(vite@6.3.5(@types/node@22.15.18)(jiti@2.4.2)(yaml@2.8.0))(vue@3.5.16(typescript@5.8.3))(wxt@0.20.6(@types/node@22.15.18)(jiti@2.4.2)(rollup@4.40.2)(yaml@2.8.0))
       dotenv:
-        specifier: ^16.5.0
-        version: 16.5.0
+        specifier: ^17.2.3
+        version: 17.2.3
       lint-staged:
         specifier: ^16.0.0
         version: 16.1.0
@@ -828,8 +828,12 @@ packages:
     resolution: {integrity: sha512-lXpXz2ZE1cea1gL4sz2Ipj8y4PiVjytYr3Ij0SWoms1PGxIv7m2CRKuRuCRtHdVuvM/hNJPMxt5PbhboNC4dPQ==}
     engines: {node: '>=12'}
 
-  dotenv@16.5.0:
-    resolution: {integrity: sha512-m/C+AwOAr9/W1UOIZUo232ejMNnJAJtYQjUbHoNTBNTJSvqzzDh7vnrei3o3r3m9blf6ZoDkvcw0VmozNRFJxg==}
+  dotenv@16.6.1:
+    resolution: {integrity: sha512-uBq4egWHTcTt33a72vpSG0z3HnPuIl6NqYcTrKEg2azoEyl2hpW0zqlxysq2pK9HlDIHyHyakeYaYnSAwd8bow==}
+    engines: {node: '>=12'}
+
+  dotenv@17.2.3:
+    resolution: {integrity: sha512-JVUnt+DUIzu87TABbhPmNfVdBDt18BLOWjMUFJMSi/Qqg7NTYtabbvSNJGOJ7afbRuv9D/lngizHtP7QyLQ+9w==}
     engines: {node: '>=12'}
 
   emoji-regex@10.4.0:
@@ -2521,7 +2525,7 @@ snapshots:
       chokidar: 4.0.3
       confbox: 0.2.2
       defu: 6.1.4
-      dotenv: 16.5.0
+      dotenv: 16.6.1
       exsolve: 1.0.5
       giget: 2.0.0
       jiti: 2.4.2
@@ -2743,9 +2747,11 @@ snapshots:
 
   dotenv-expand@12.0.2:
     dependencies:
-      dotenv: 16.5.0
+      dotenv: 16.6.1
 
-  dotenv@16.5.0: {}
+  dotenv@16.6.1: {}
+
+  dotenv@17.2.3: {}
 
   emoji-regex@10.4.0: {}
 
@@ -3461,7 +3467,7 @@ snapshots:
       cac: 6.7.14
       cli-highlight: 2.1.11
       consola: 3.4.2
-      dotenv: 16.5.0
+      dotenv: 16.6.1
       extract-zip: 2.0.1
       formdata-node: 6.0.3
       listr2: 8.3.3
@@ -3949,7 +3955,7 @@ snapshots:
       ci-info: 4.2.0
       consola: 3.4.2
       defu: 6.1.4
-      dotenv: 16.5.0
+      dotenv: 16.6.1
       dotenv-expand: 12.0.2
       esbuild: 0.25.4
       fast-glob: 3.3.3
